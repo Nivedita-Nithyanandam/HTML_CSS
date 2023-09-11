@@ -3,46 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS_Task7</title>
+    <title>CSS_TASK_7</title>
     <style>
-        *
-        {
-            margin: 0;
-            padding:0px;
-        }
-        nav
+        .color
         {
             background-color:rgb(104,17,47);
-            height:500px;
-            width: 500px;
-            margin-top: 100px;
-            margin-left:450px;
-            
+            min-width:500px;
+            min-height:500px;
             border-color:#b30059;
             border-style: solid;
             border-top-width: 25px;
             border-bottom-width: 25px;
             border-left-width: 100px;
             border-right-width:100px;
-            
-        }
-        form
-        {
-            
-            font-weight: 100;
-            font-style: normal;
             color: rgb(224,192,202);
-            padding-left: 100px;
-            padding-top: 50px;
-            padding-bottom: 20px;
+            padding-top:20px;
         }
+        td{
+            padding-right: 50px;
+            padding-top:15px;
 
-        textarea::placeholder 
-        {
-            font-size:13px;
-            font-family: 'Times New Roman', Times, serif;
         }
-
         input[type="submit"]
         {
             color: black;
@@ -53,57 +34,66 @@
             font-weight: 750;
             font-size: 20px;
         }
-        
+
+        div
+        {
+            display: inline-block;
+            position: ;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <form>
-            <p style="padding-bottom: 20px;">
-                <label  for="name">Name:</label>
-                <input name="name" style="position:absolute; width: 150px;left:750px;" placeholder="your name" type="text">
-            </p>
-            <p style="padding-bottom: 20px;">
-                <label  for="mail">Email:</label>
-                <input name = "mail" style="position:absolute; width: 150px;left:750px" placeholder="your email" type="email">
-            </p>
-            <p style="padding-bottom: 20px;">
-                <label  for="pass">Password:</label>
-                <input name="pass" style="position:absolute; width: 150px;left:750px" type="password">
-            </p>
-            <p style="padding-bottom: 20px;">
-                <label  for="no">Phone Number:</label>
-                <input name="no" style="position:absolute; width: 150px;left:750px" type="text">
-            </p>
-            <p style="padding-bottom: 20px;">Gender:
-                <label style="position: absolute;left:750px" for="sex">Male:</label>
-                <input name="sex" type = "radio" style="position:absolute;left:790px;margin-top: 3px;">
-                <label style="position: absolute;left:810px" for="sex">Female:</label>
-                <input name="sex" type = "radio" style="position:absolute;left:865px;margin-top: 3px;">
-                <label style="position: absolute;left:885px" for="sex">Other:</label>
-                <input name="sex" type = "radio" style="position:absolute;left:930px;margin-top: 3px;">
-            </p>
-
-            <p style="padding-bottom: 20px;">
-                <label for="lang">language</label>
-                <select name="lang" style="position:absolute;width:auto; left:750px;height:25px">
-                    <option value="-1">Select language</option>
-                    <option value="english">English</option>
-                    <option value="tamil">Tamil</option>
-                </select>
-            </p>
-            <p style="padding-bottom: 20px;">
-                <label  for="zip">Zip Code:</label>
-                <input name="zio" style="position:absolute; width: 150px;left:750px" type="text">
-            </p>
-
-            <p style="padding-bottom: 50px;">
-                <label  for="about">About:</label>
-                <textarea name="zio" style="position:absolute; width: 150px;left:750px;height: 50px;" placeholder="Write about yourself..."></textarea>
-            </p>
+    <div align="center" class="color" >
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input name="name" style="width: 150px;" placeholder="your name" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label  for="mail">Email:</label></td>
+                    <td><input name = "mail" style="width: 150px;" placeholder="your email" type="email"></td>
+                </tr>
+                <tr>
+                    <td><label  for="pass">Password:</label></td>
+                    <td><input name="pass" style="width: 150px;" type="password"></td>
+                </tr>
+                <tr>
+                    <td><label  for="no">Phone Number:</label></td>
+                    <td><input name="no" style="width: 150px;" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label  for="sex">Gender:</label></td>
+                    <td> 
+                        <label for="m">Male:</label>
+                        <input type="radio" id="m" name="gender" value="Male">
+                        <label for="f">Female:</label>
+                        <input type="radio" id="f" name="gender" value="Female">
+                        <label for="o">Other:</label> 
+                        <input type="radio" id="o" name="gender" value="Other">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lang">language</label></td>
+                    <td>
+                        <select name="lang" style="width:auto;height:25px">
+                            <option value="-1">Select language</option>
+                            <option value="english">English</option>
+                            <option value="tamil">Tamil</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label  for="zip">Zip Code:</label></td>
+                    <td><input name="zip" style="width: 150px" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label  for="about">About:</label></td>
+                    <td><textarea name="zio" style="width: 150px;height: 50px;" placeholder="Write about yourself..."></textarea></td>
+                </tr>
+            </table>
             <input type="submit" value="Register"/>
-            
         </form>
-    </nav>
+    </div>
 </body>
 </html>
